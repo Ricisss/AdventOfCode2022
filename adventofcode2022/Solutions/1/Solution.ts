@@ -18,7 +18,12 @@ export class Solution {
             return -elf.getTotalCalories();
         });
 
-        return orderedElfs[0].getTotalCalories();
+
+        const elf1 = orderedElfs[0].getTotalCalories();
+        const elf2 = orderedElfs[1].getTotalCalories();
+        const elf3 = orderedElfs[2].getTotalCalories();
+
+        return elf1 + elf2 + elf3;
     }
 
 
