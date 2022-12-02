@@ -1,0 +1,3 @@
+C:\Users\Richard\source\repos\adventofcode2022\adventofcode2022\obj\Debug\adventofcode2022.njsprojAssemblyReference.cache
+C:\Users\Richard\source\repos\adventofcode2022\adventofcode2022\obj\Debug\adventofcode2022.njsproj.CoreCompileInputs.cache
+C:\Users\Richard\source\repos\adventofcode2022\adventofcode2022\bin\Microsoft.NodejsTools.WebRole.dll
