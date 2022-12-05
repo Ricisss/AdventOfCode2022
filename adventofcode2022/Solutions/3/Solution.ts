@@ -5,32 +5,28 @@ import _ = require("underscore");
 
 export class Solution {
 
-    private rucksacks: string[];
+    private groups: string[][];
 
 
     constructor(input: string) {
         this._parseInput(input);
+        console.log(this.groups);
     }
 
 
     public GetSolution(): any {
         let total = 0;
 
-        this.rucksacks.forEach((rucksack) => {
-            const size = rucksack.length;
-            const comparmentA = rucksack.substring(0, (size / 2));
-            const comparmentB = rucksack.substring(size / 2, size);
-
-            const intersection = _.intersection(comparmentA, comparmentB);
-            const pointValue = this.getPointValue(intersection[0]);
+        this.groups.forEach((group) => {
+            const intersection = _.intersection(group[0], group[1], group[2]);
+            const pointValue = this.getItemPointValue(intersection[0]);
             total += pointValue;
-
         })
 
         return total;
     }
 
-    private getPointValue(letter: string): number {
+    private getItemPointValue(letter: string): number {
         let result = letter.charCodeAt(0);
 
         if (result < 97) {
@@ -51,6 +47,19 @@ export class Solution {
 
     private _parseInput(input: string) {
         const lines = input.split("\n");
-        this.rucksacks = lines;
+        const parsedLines: string[] = [];
+        this.groups = [];
+
+
+        lines.forEach((line) => {
+            parsedLines.push(line.replace("\r", ""));
+        })
+
+
+        let i = 0;
+        while (i < parsedLines.length) {
+            this.groups.push([parsedLines[i], parsedLines[i + 1], parsedLines[i + 2]]);
+            i += 3;
+        }
     }
 }
