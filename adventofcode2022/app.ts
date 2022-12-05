@@ -21,10 +21,3 @@ fs.readFile('Inputs\\3.txt', 'utf8', (err, data) => {
     console.log("Solution: " + solution);
     console.log("----------------------");
 });
-
-
-//require('readline')
-//    .createInterface(process.stdin, process.stdout)
-//    .question("Press [Enter] to exit...", function () {
-//        process.exit();
-//    });
