@@ -2,14 +2,14 @@
 
 
 
-import { Solution } from "./Solutions/2/Solution"
+import { Solution } from "./Solutions/3/Solution"
 
 const fs = require('fs');
 
 
 
 
-fs.readFile('Inputs\\2.txt', 'utf8', (err, data) => {
+fs.readFile('Inputs\\3.txt', 'utf8', (err, data) => {
     if (err) {
         console.error(err);
         return;
@@ -17,7 +17,9 @@ fs.readFile('Inputs\\2.txt', 'utf8', (err, data) => {
 
     var sol = new Solution(data);
     const solution = sol.GetSolution();
+    console.log("----------------------");
     console.log("Solution: " + solution);
+    console.log("----------------------");
 });
 
 

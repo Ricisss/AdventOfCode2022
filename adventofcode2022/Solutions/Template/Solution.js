@@ -8,7 +8,7 @@ class Solution {
     GetSolution() {
     }
     _parseInput(input) {
-        const lines = input.split(/\n\s*\n/);
+        const lines = input.split("\n");
     }
 }
 exports.Solution = Solution;

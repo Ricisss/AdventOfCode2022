@@ -18,6 +18,6 @@ export class Solution {
 
 
     private _parseInput(input: string) {
-        const lines = input.split(/\n\s*\n/);
+        const lines = input.split("\n");
     }
 }
