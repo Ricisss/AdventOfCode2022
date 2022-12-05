@@ -11,10 +11,10 @@ class Elf {
         if (this.startIndex <= elf.startIndex
             &&
                 this.endIndex >= elf.endIndex
-            &&
+            ||
                 this.startIndex <= elf.endIndex
-            &&
-                this.endIndex >= elf.startIndex)
+                    &&
+                        this.endIndex >= elf.startIndex)
             return true;
         return false;
     }

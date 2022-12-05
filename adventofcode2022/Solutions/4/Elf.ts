@@ -16,7 +16,7 @@ export class Elf {
             this.startIndex <= elf.startIndex
             &&
             this.endIndex >= elf.endIndex
-            &&
+            ||
             this.startIndex <= elf.endIndex
             &&
             this.endIndex >= elf.startIndex
