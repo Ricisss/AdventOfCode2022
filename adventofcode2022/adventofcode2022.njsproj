@@ -34,6 +34,8 @@
   <ItemGroup>
     <Content Include="app.ts" />
     <Content Include="Inputs\4.txt" />
+    <Content Include="Inputs\5_example.txt" />
+    <Content Include="Inputs\5.txt" />
     <Content Include="Inputs\4_example.txt" />
     <Content Include="Inputs\3_example.txt" />
     <Content Include="Inputs\3.txt" />
@@ -55,6 +57,7 @@
     <Folder Include="Solutions\2\" />
     <Folder Include="Solutions\3\" />
     <Folder Include="Solutions\4\" />
+    <Folder Include="Solutions\5\" />
     <Folder Include="Solutions\Template\" />
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +74,9 @@
     <TypeScriptCompile Include="Solutions\3\Solution.ts" />
     <TypeScriptCompile Include="Solutions\4\Elf.ts" />
     <TypeScriptCompile Include="Solutions\4\Solution.ts" />
+    <TypeScriptCompile Include="Solutions\5\Instruction.ts" />
+    <TypeScriptCompile Include="Solutions\5\Solution.ts" />
+    <TypeScriptCompile Include="Solutions\5\Stack.ts" />
     <TypeScriptCompile Include="Solutions\Template\Solution.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
