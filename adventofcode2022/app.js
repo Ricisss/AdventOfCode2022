@@ -1,9 +1,8 @@
 'use strict';
 Object.defineProperty(exports, "__esModule", { value: true });
-const Solution_1 = require("./Solutions/1/Solution");
+const Solution_1 = require("./Solutions/2/Solution");
 const fs = require('fs');
-console.log('Hello world');
-fs.readFile('Inputs\\1.txt', 'utf8', (err, data) => {
+fs.readFile('Inputs\\2.txt', 'utf8', (err, data) => {
     if (err) {
         console.error(err);
         return;

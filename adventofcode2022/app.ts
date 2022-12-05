@@ -1,15 +1,15 @@
 'use strict';
 
-import { Solution } from "./Solutions/1/Solution"
+
+
+import { Solution } from "./Solutions/2/Solution"
 
 const fs = require('fs');
 
 
 
-console.log('Hello world');
 
-
-fs.readFile('Inputs\\1.txt', 'utf8', (err, data) => {
+fs.readFile('Inputs\\2.txt', 'utf8', (err, data) => {
     if (err) {
         console.error(err);
         return;
