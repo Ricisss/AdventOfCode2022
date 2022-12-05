@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.ts" />
+    <Content Include="Inputs\2_example.txt" />
     <Content Include="Inputs\2.txt" />
     <Content Include="Inputs\1.txt">
       <SubType>Code</SubType>

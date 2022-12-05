@@ -9,8 +9,38 @@ class Solution {
         let totalPoints = 0;
         this.rounds.forEach((round) => {
             const playerA = round[0];
-            const playerB = round[2];
-            totalPoints += this.getRoundPoints(playerA, playerB);
+            const endCondition = round[2];
+            let playerB = "";
+            switch (endCondition) {
+                case "X": //Loose
+                    if (playerA === "A")
+                        playerB = "Z";
+                    if (playerA === "B")
+                        playerB = "X";
+                    if (playerA === "C")
+                        playerB = "Y";
+                    break;
+                case "Y": //Draw
+                    if (playerA === "A")
+                        playerB = "X";
+                    if (playerA === "B")
+                        playerB = "Y";
+                    if (playerA === "C")
+                        playerB = "Z";
+                    break;
+                case "Z": //Win
+                    if (playerA === "A")
+                        playerB = "Y";
+                    if (playerA === "B")
+                        playerB = "Z";
+                    if (playerA === "C")
+                        playerB = "X";
+                    break;
+                default:
+            }
+            const roundPoints = this.getRoundPoints(playerA, playerB);
+            totalPoints += roundPoints;
+            //console.log(roundPoints);
         });
         return totalPoints;
     }
