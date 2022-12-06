@@ -7,10 +7,11 @@ class Solution {
         this._parseInput(input);
     }
     GetSolution() {
-        for (var i = 4; i <= this.input.length; i++) {
-            const chars = this.input.substring(i - 4, i);
+        const distinctCharacters = 14;
+        for (var i = distinctCharacters; i <= this.input.length; i++) {
+            const chars = this.input.substring(i - distinctCharacters, i);
             const uniq = _.uniq(chars);
-            if (uniq.length === 4)
+            if (uniq.length === distinctCharacters)
                 return i;
         }
     }
