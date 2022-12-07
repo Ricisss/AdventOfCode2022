@@ -5,41 +5,41 @@ import {Folder} from "./Folder";
 
 export class Solution {
     private root: Folder = new Folder(null, null);
+    private currentSolutionSize: number;
+    private moreSpaceNeeded: number;
 
     constructor(input: string) {
         this._parseInput(input);
     }
 
     public GetSolution(): any {
-        // console.log(this.root);
-        // this.root.print();
 
-        const solutionFolders = this.solve(this.root.Folders[0]);
-        let totalSize = 0;
+        const totalSpaceTaken = this.root.GetSize();
+        const totalDriveSpace = 70000000;
+        const spaceNeeded = 30000000;
+        const freeSpace = totalDriveSpace - totalSpaceTaken;
+        this.moreSpaceNeeded = spaceNeeded - freeSpace;
+        this.currentSolutionSize = totalDriveSpace;
 
-        solutionFolders.forEach((folder) => {
-            console.log(folder.name);
-            console.log(folder.GetSize());
-            totalSize += folder.GetSize();
-        })
-        // console.log(solutionFolders);
-
-        return totalSize;
+        this.solve(this.root);
+        return this.currentSolutionSize;
     }
 
-    private solve(folder: Folder, solutionFolders: Folder[] = []): Folder[] {
-        folder.Folders.forEach((folder) => {
-            const size = folder.GetSize();
+    private solve(folder: Folder) {
+        folder.Folders.forEach((subFolder) => {
+            const subFolderSize = subFolder.GetSize();
 
-            if (size < 100000) {
-                solutionFolders.push(folder);
-                this.solve(folder, solutionFolders);
-            } else {
-                this.solve(folder, solutionFolders);
+            if (subFolderSize > this.moreSpaceNeeded) {
+                //Folder is big enough
+                if (subFolderSize < this.currentSolutionSize) {
+                    //this folder is better
+                    this.currentSolutionSize = subFolderSize;
+                }
             }
+
+            this.solve(subFolder);
         })
 
-        return solutionFolders;
     }
 
     private _parseInput(input: string) {

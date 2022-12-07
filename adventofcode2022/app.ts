@@ -1,11 +1,9 @@
 'use strict';
 
 
-
-import { Solution } from "./Solutions/7/Solution"
+import {Solution} from "./Solutions/7/Solution"
 
 const fs = require('fs');
-
 
 
 fs.readFile('Inputs\\7.txt', 'utf8', (err, data) => {
