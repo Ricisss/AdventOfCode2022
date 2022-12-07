@@ -46,6 +46,8 @@
     <Content Include="Inputs\1.txt">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Inputs\7.txt" />
+    <Content Include="Inputs\7_example.txt" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json">
@@ -61,6 +63,7 @@
     <Folder Include="Solutions\4\" />
     <Folder Include="Solutions\5\" />
     <Folder Include="Solutions\6\" />
+    <Folder Include="Solutions\7\" />
     <Folder Include="Solutions\Template\" />
   </ItemGroup>
   <ItemGroup>
@@ -81,7 +84,14 @@
     <TypeScriptCompile Include="Solutions\5\Solution.ts" />
     <TypeScriptCompile Include="Solutions\5\Stack.ts" />
     <TypeScriptCompile Include="Solutions\6\Solution.ts" />
+    <TypeScriptCompile Include="Solutions\7\Solution.ts" />
     <TypeScriptCompile Include="Solutions\Template\Solution.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Script Include="Solutions\7\Command.ts" />
+    <Script Include="Solutions\7\CommandType.ts" />
+    <Script Include="Solutions\7\File.ts" />
+    <Script Include="Solutions\7\Folder.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>
